@@ -9,10 +9,18 @@ export default {
   plugins: [require('@tailwindcss/forms')],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif']
+      },
+      transitionDuration: {
+        '2000': '2000ms'
+      },
       colors: {
         primary: colors.blue,
         secondary: colors.gray,
-
+        airisBlue: '#31bae5',
+        darkGrey: 'rgb(18,18,18)',
         provider: {
           apple: '#000000',
           bitbucket: '#0052CC',
