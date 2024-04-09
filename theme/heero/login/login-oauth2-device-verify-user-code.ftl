@@ -2,7 +2,7 @@
 <#import "components/atoms/button.ftl" as button>
 <#import "components/atoms/button-group.ftl" as buttonGroup>
 <#import "components/atoms/form.ftl" as form>
-<#import "components/atoms/input.ftl" as input>
+<#import "components/atoms/user-code-input.ftl" as userCodeInput>
 
 <@layout.registrationLayout; section>
   <#if section="header">
@@ -10,7 +10,7 @@
   <#elseif section="form">
     <h3 class="font-montserrat">${msg("verifyOAuth2DeviceUserCode")}</h3>
     <@form.kw action=url.oauth2DeviceVerificationAction method="post">
-      <@input.kw autofocus=true id="device-user-code" name="device_user_code" />
+      <@userCodeInput.kw />
       <@button.kw color="airisBlue" name="accept" type="submit">
           ${msg("doSubmit")}
       </@button.kw>

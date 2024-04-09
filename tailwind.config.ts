@@ -17,9 +17,21 @@ export default {
         '2000': '2000ms'
       },
       colors: {
-        primary: colors.blue,
-        secondary: colors.gray,
-        airisBlue: '#31bae5',
+        primary: {
+            '50': '#edfbfe',
+            '100': '#d1f4fc',
+            '200': '#a8e9f9',
+            '300': '#6dd8f3',
+            '400': '#2bbce6',
+            '500': '#0e9ecc',
+            '600': '#0f7fab',
+            '700': '#13668b',
+            '800': '#195471',
+            '900': '#194660',
+            '950': '#0a2d42',
+            DEFAULT: '#2bbce6'
+        },
+        secondary: colors.slate,
         darkGrey: 'rgb(18,18,18)',
         provider: {
           apple: '#000000',

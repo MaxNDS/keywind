@@ -4,7 +4,7 @@
 <#macro
   kw
   autofocus=false
-  class="font-montserrat block border-secondary-200 mt-1 rounded-md w-full focus:border-airisBlue focus:ring focus:ring-airisBlue focus:ring-opacity-50 sm:text-sm"
+  class="font-montserrat block border-secondary-200 mt-1 rounded-md w-full focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 sm:text-sm"
   disabled=false
   invalid=false
   label=""
