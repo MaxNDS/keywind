@@ -13,7 +13,7 @@
       <div class="py-4">
         <@userCodeInput.kw />
       </div>
-      <@button.kw color="airisBlue" name="accept" type="submit">
+      <@button.kw name="accept" type="submit">
           ${msg("doSubmit")}
       </@button.kw>
     </@form.kw>
