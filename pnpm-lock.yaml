@@ -8,9 +8,6 @@ dependencies:
   '@alpinejs/focus':
     specifier: ^3.13.8
     version: 3.13.8
-  '@types/alpinejs__focus':
-    specifier: ^3.13.4
-    version: 3.13.4
   alpinejs:
     specifier: ^3.13.0
     version: 3.13.0
@@ -25,6 +22,9 @@ devDependencies:
   '@types/alpinejs':
     specifier: ^3.13.2
     version: 3.13.2
+  '@types/alpinejs__focus':
+    specifier: ^3.13.4
+    version: 3.13.4
   '@types/archiver':
     specifier: ^5.3.3
     version: 5.3.3
@@ -327,12 +327,13 @@ packages:
 
   /@types/alpinejs@3.13.2:
     resolution: {integrity: sha512-kRGGjngGMCw8H4BIDbaDLwuGNIsrzdvt54kKqLe6O8ZLTNW5swEMr6j2ByH/vUo46ajqf2Qbxh6fcxPDrfEU+Q==}
+    dev: true
 
   /@types/alpinejs__focus@3.13.4:
     resolution: {integrity: sha512-g7pQNxST7palODhfg6DJoKWS59pD8EK1wNjkJydBP2u8LntlO8oD4f2uj6Ywh2CL/olM/bPSyYxwr+WQQPlphg==}
     dependencies:
       '@types/alpinejs': 3.13.2
-    dev: false
+    dev: true
 
   /@types/archiver@5.3.3:
     resolution: {integrity: sha512-0ABdVcXL6jOwNGY+hjWPqrxUvKelBEwNLcuv/SV2vZ4YCH8w9NttFCt+/QqI5zgMX+iX/XqVy89/r7EmLJmMpQ==}

@@ -1,3 +1,4 @@
+declare var require: any;
 import type { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
 
