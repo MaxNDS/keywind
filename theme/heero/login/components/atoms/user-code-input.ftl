@@ -47,7 +47,7 @@
                 id="user_code_digit_8" type="text" size="1" maxlength="1"
                 @change="$dispatch('inputchanged', { index: 8, value: $el.value.toUpperCase() })" 
             />
-            <input type="hidden" id="user_device_code" name="user_device_code" x-model="userCode" />
+            <input type="hidden" id="device-user-code" name="device_user_code" x-model="userCode" />
         </div>
     </div>
 </#macro>

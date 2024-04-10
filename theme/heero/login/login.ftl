@@ -29,7 +29,7 @@
           name="credentialId"
           type="hidden"
           value="<#if auth.selectedCredential?has_content>${auth.selectedCredential}</#if>"
-        >
+        />
         <@input.kw
           autocomplete=realm.loginWithEmailAllowed?string("email", "username")
           autofocus=true
@@ -72,7 +72,7 @@
     </#if>
   <#elseif section="info">
     <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-      <div class="text-center">
+      <div class="font-montserrat text-center">
         ${msg("noAccount")}
         <@link.kw color="primary" href=url.registrationUrl>
           ${msg("doRegister")}
