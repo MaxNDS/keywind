@@ -11,4 +11,4 @@ focus-trap/dist/focus-trap.esm.js:
   * focus-trap 6.9.4
   * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
   *)
-*/const De=()=>({userCode:"0123-5678",trapFocus:!0,currentIndex:0,checkKey:n=>n!=="Backspace"&&n!=="Tab",substituteCharAt:(n,e,t)=>n.substring(0,e)+t+n.substring(e+t.length),update(n){this.userCode=n,console.log(n)}});window.Alpine=L;L.plugin(Ce);L.data("userCodeData",De);L.start();
+*/const De=()=>({userCode:"0123-5678",trapFocus:!1,currentIndex:0,checkKey:n=>n!=="Backspace"&&n!=="Tab",substituteCharAt:(n,e,t)=>n.substring(0,e)+t+n.substring(e+t.length),update(n){this.userCode=n}});window.Alpine=L;L.plugin(Ce);L.data("userCodeData",De);L.start();
