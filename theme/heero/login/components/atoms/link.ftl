@@ -4,7 +4,7 @@
       <#assign colorClass="text-primary-600 hover:text-primary-500">
       <#break>
     <#case "secondary">
-      <#assign colorClass="text-secondary-600 hover:text-secondary-900">
+      <#assign colorClass="text-secondary-700 hover:text-secondary-900">
       <#break>
     <#default>
       <#assign colorClass="text-primary-600 hover:text-primary-500">
@@ -19,7 +19,7 @@
   </#switch>
 
   <${component}
-    class="<#compress>${colorClass} ${sizeClass} inline-flex</#compress>"
+    class="<#compress>${colorClass} ${sizeClass} inline-flex font-montserrat</#compress>"
 
     <#list rest as attrName, attrValue>
       ${attrName}="${attrValue}"

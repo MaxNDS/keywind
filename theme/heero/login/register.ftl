@@ -75,13 +75,13 @@
         <div class="g-recaptcha" data-sitekey="${recaptchaSiteKey}" data-size="compact"></div>
       </#if>
       <@buttonGroup.kw>
-        <@button.kw color="primary" type="submit">
+        <@button.kw type="submit">
           ${msg("doRegister")}
         </@button.kw>
       </@buttonGroup.kw>
     </@form.kw>
   <#elseif section="nav">
-    <@link.kw color="secondary" href=url.loginUrl size="small">
+    <@link.kw color="secondary" component="a" href=url.loginUrl>
       ${kcSanitize(msg("backToLogin"))?no_esc}
     </@link.kw>
   </#if>

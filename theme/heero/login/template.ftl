@@ -73,10 +73,10 @@
       <@container.kw>
         <@card.kw content=cardContent footer=cardFooter header=cardHeader />
         <@nav.kw>
-          <#nested "nav">
           <#if realm.internationalizationEnabled && locale.supported?size gt 1>
             <@localeProvider.kw currentLocale=locale.current locales=locale.supported />
           </#if>
+          <#nested "nav">
         </@nav.kw>
       </@container.kw>
     </@body.kw>
