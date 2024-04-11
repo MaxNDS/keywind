@@ -8,7 +8,7 @@
   <#if section="header">
     ${msg("verifyAirisDeviceTitle")}
   <#elseif section="form">
-    <h3 class="font-montserrat">${msg("verifyOAuth2DeviceUserCode")}</h3>
+    <p class="font-montserrat text-center">${msg("verifyOAuth2DeviceUserCode")}</p>
     <@form.kw action=url.oauth2DeviceVerificationAction method="post">
       <div class="py-4">
         <@userCodeInput.kw />

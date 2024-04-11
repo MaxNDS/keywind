@@ -18,7 +18,7 @@
     ${msg("emailForgotTitle")}
   <#elseif section="form">
     <@form.kw action=url.loginAction method="post">
-      <p class="font-montserrat pb-4">${msg("emailInstruction")}</p>
+      <p class="font-montserrat pb-4 text-center">${msg("emailInstruction")}</p>
       <@input.kw
         autocomplete=realm.loginWithEmailAllowed?string("email", "username")
         autofocus=true

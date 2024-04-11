@@ -7,6 +7,7 @@
 <#import "components/atoms/heading.ftl" as heading>
 <#import "components/atoms/logo.ftl" as logo>
 <#import "components/atoms/nav.ftl" as nav>
+<#import "components/atoms/footer.ftl" as footer>
 <#import "components/molecules/locale-provider.ftl" as localeProvider>
 <#import "components/molecules/username.ftl" as username>
 
@@ -79,6 +80,7 @@
           <#nested "nav">
         </@nav.kw>
       </@container.kw>
+      <@footer.kw />
     </@body.kw>
   </html>
 </#macro>

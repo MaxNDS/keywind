@@ -8,7 +8,7 @@
         </#if>
     <#elseif section="form">
         <div>
-            <p class="p-4 font-montserrat">
+            <p class="p-4 font-montserrat text-center">
                 ${message.summary}
                 <#if requiredActions??>
                     <#list requiredActions>: 
