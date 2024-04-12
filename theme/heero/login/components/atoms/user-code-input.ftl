@@ -2,9 +2,10 @@
     <div x-data="userCodeData">
         <div 
             class="flex flex-row justify-between items-center"
-            x-trap="trapFocus" 
-            @inputchanged="currentIndex = $event.detail.index; update(substituteCharAt(userCode, $event.detail.index, $event.detail.value));"
-            @keyup="if (checkKey(event.key)) { $focus.next(); }"
+            x-trap="trapFocus"
+            @keydown="onKeydown(event)"
+            @keyup="onKeyup(event, $focus)" 
+            @inputchanged="update($event.detail.index, substituteCharAt(userCode, $event.detail.index, $event.detail.value));"
             >
             <input 
                 class="p-1 border-secondary-200 rounded-sm uppercase text-lg text-center focus:border-primary focus:ring-primary" 
