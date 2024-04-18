@@ -4,7 +4,6 @@ export default () => ({
     currentIndex: 0,
     inputLocked: false,
     lastKey: null,
-    checkKey: (key) => key !== 'Backspace' && key !== 'Tab',
     substituteCharAt: (str, index, replacement) => str.substring(0, index) + replacement + str.substring(index + replacement.length),
     update(index, value) {
         this.currentIndex = index;
