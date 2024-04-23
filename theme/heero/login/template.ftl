@@ -62,13 +62,14 @@
       <#nested "info">
     </#if>
   </#assign>
+  
   <!DOCTYPE html>
   <html<#if realm.internationalizationEnabled> lang="${locale.currentLanguageTag}"</#if>>
     <head>
       <@document.kw script=script />
     </head>
     <@body.kw>
-      <header class="bg-black flex flex-row w-full px-12 py-4 max-h-12 sticky">
+      <header class="bg-black flex flex-row w-full px-4 sm:px-12 py-4 max-h-12 sticky">
         <@logo.kw />
       </header>
       <@container.kw>
@@ -80,6 +81,7 @@
           <#nested "nav">
         </@nav.kw>
       </@container.kw>
+      <div class="grow"></div>
       <@footer.kw />
     </@body.kw>
   </html>

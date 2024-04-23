@@ -57,9 +57,11 @@
               />
             </#if>
             <#if realm.resetPasswordAllowed>
-              <@link.kw color="primary" href=url.loginResetCredentialsUrl size="small">
-                ${msg("doForgotPassword")}
-              </@link.kw>
+              <div class="w-full text-center">
+                <@link.kw color="primary" href=url.loginResetCredentialsUrl size="small">
+                  ${msg("doForgotPassword")}
+                </@link.kw>
+              </div>
             </#if>
           </div>
         </#if>
@@ -72,8 +74,7 @@
     </#if>
   <#elseif section="info">
     <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-      <div class="font-montserrat text-center">
-        ${msg("noAccount")}
+      <div class="text-center mt-4">
         <@link.kw color="primary" href=url.registrationUrl>
           ${msg("doRegister")}
         </@link.kw>

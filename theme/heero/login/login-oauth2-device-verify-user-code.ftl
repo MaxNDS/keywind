@@ -4,6 +4,8 @@
 <#import "components/atoms/form.ftl" as form>
 <#import "components/atoms/user-code-input.ftl" as userCodeInput>
 
+<!-- https://github.com/keycloak/keycloak/issues/15717 -->
+
 <@layout.registrationLayout; section>
   <#if section="header">
     ${msg("verifyAirisDeviceTitle")}

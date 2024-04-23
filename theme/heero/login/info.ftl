@@ -3,8 +3,6 @@
     <#if section="header">
         <#if messageHeader??>
             ${messageHeader}
-        <#else>
-            ${message.summary}
         </#if>
     <#elseif section="form">
         <div>
