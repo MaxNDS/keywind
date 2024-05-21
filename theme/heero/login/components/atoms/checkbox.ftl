@@ -1,8 +1,8 @@
-<#macro kw checked=false label="" name="" rest...>
+<#macro kw checked=false required=false label="" name="" rest...>
   <div class="flex items-center">
     <input
       <#if checked>checked</#if>
-
+      <#if required>required</#if>
       class="border-secondary-200 h-4 rounded text-primary-600 w-4 focus:ring-primary-200 focus:ring-opacity-50"
       id="${name}"
       name="${name}"

@@ -4,6 +4,7 @@
 <#import "components/atoms/form.ftl" as form>
 <#import "components/atoms/input.ftl" as input>
 <#import "components/atoms/link.ftl" as link>
+<#import "components/atoms/checkbox.ftl" as checkbox>
 
 <@layout.registrationLayout
   displayMessage=!messagesPerField.existsError("firstName", "lastName", "email", "username", "password", "password-confirm")
@@ -73,6 +74,24 @@
       </#if>
       <#if recaptchaRequired??>
         <div class="g-recaptcha" data-sitekey="${recaptchaSiteKey}" data-size="compact"></div>
+      </#if>
+      <#if termsAcceptanceRequired??>
+        <p class="text-sm">${msg("termsText")}</p>
+        <ul style="list-style: none;">
+          <li>
+            <@link.kw href="https://shop.airis.fit/pages/agb" size="small">${msg("termsLink")}</@link.kw>
+          </li>
+          <li>
+            <@link.kw href="https://shop.airis.fit/pages/datenschutz" size="small">${msg("privacyLink")}</@link.kw>
+          </li>
+        </ul>
+        <@checkbox.kw 
+          label=msg("acceptTerms")
+          id="termsAccepted"
+          name="termsAccepted"
+          required=true
+        />
+        
       </#if>
       <@buttonGroup.kw>
         <@button.kw type="submit">
