@@ -1,23 +1,27 @@
 export default () => ({
     userCode: '0123-5678',
+    userCodeCache: [],
     trapFocus: false,
     currentIndex: 0,
-    inputLocked: false,
-    lastKey: null,
-    substituteCharAt: (str, index, replacement) => str.substring(0, index) + replacement + str.substring(index + replacement.length),
-    update(index, value) {
-        this.currentIndex = index;
-        this.userCode = value;
+    onInput: function(e, index) {
+        const val = e.target.value;
+        if (e.data === null) {
+            // backspace was pressed
+            if (this.currentIndex === 1 && val.length === 0) {
+                this.currentIndex = 0;
+                this.$refs.userCodeInput0.focus();
+            }
+            return;
+        }
+        
+        if (val.length === 4) {
+            this.userCodeCache[index] = val;
+            if (index === 0) {
+                this.currentIndex = 1;
+                this.$refs.userCodeInput1.focus();
+            }else {
+                this.userCode = this.userCodeCache.join('-');
+            }
+        }
     },
-    onKeydown(event) {
-        if (this.inputLocked) return;
-        this.inputLocked = true;
-        this.lastKey = event.key;
-    },
-    onKeyup(event, focus) {
-        if (this.lastKey !== event.key) return;
-        this.inputLocked = false;
-        this.lastKey = null;
-        focus.next();
-    }
 });
