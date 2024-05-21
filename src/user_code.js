@@ -15,7 +15,7 @@ export default () => ({
         }
         
         if (val.length === 4) {
-            this.userCodeCache[index] = val;
+            this.userCodeCache[index] = val.toUpperCase();
             if (index === 0) {
                 this.currentIndex = 1;
                 this.$refs.userCodeInput1.focus();
